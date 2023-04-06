@@ -1,0 +1,55 @@
+.container {
+  border: 1px solid #b0b0b0;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.headerContainer {
+  padding: 12px 20px;
+}
+.cardTitle {
+  font-family: 'Cardo', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #b0b0b0;
+  border-bottom-right-radius: 10px;
+}
+.headerImageContainer {
+  display: flex;
+  justify-content: center;
+
+  max-width: fit-content;
+  margin: 0 auto;
+  border: #b0b0b0 1px solid;
+  padding: 10px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.cardSubTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 15px 0 2px 0;
+  color: #7b7b7b;
+  border-bottom: #7b7b7b 1px solid;
+}
+.cardBodyContainer {
+  padding: 0 20px;
+}
+.cardBody {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: justify;
+}
+.footerContainer {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 0;
+}
