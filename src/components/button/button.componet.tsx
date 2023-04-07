@@ -5,10 +5,12 @@ export default function Button({
   title,
   type,
   handleClick,
+  disabled,
 }: {
   title?: string;
   type?: 'button' | 'submit' | 'reset';
   handleClick?: () => void;
+  disabled?: boolean;
 }) {
   const handleButtonType = (type?: string) => {
     if (type === 'button') {
@@ -25,6 +27,7 @@ export default function Button({
       type={type}
       onClick={handleClick}
       className={handleButtonType(type)}
+      disabled={disabled}
     >
       {title}
     </button>
