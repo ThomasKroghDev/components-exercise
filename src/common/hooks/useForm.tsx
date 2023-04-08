@@ -1,7 +1,9 @@
 import { useState } from 'react';
+
 interface ValidationErrors<T> {
   [key: string]: T;
 }
+
 export function useForm(
   initialState = {},
   validations = [] as any[],
@@ -9,12 +11,14 @@ export function useForm(
 ) {
   function validate(validations: any[], values: Record<string, unknown>) {
     const errors: ValidationErrors<string> = {};
+
     validations.forEach((validation) => {
       const result = validation(values);
       if (typeof result === 'object') {
         Object.assign(errors, result);
       }
     });
+
     return {
       isValid: Object.keys(errors).length === 0,
       errors,
