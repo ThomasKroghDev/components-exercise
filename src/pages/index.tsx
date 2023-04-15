@@ -1,9 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import ContactForm from '../components/contactForm/contactForm.componet';
-import Button from '@/components/button/button.componet';
-import Image from 'next/image';
-import Link from 'next/link';
+import Hero from '@/components/hero/hero.component';
+import Navbar from '@/components/navbar/navbar.component';
 export default function Home() {
   return (
     <>
@@ -14,31 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.heroContainer}>
-          <div className={`${styles.leftContent} ${styles.gridItem}`}>
-            <h2 className={styles.header}>title/eye catcher</h2>
-            <p className={styles.tagline}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-              soluta reprehenderit perspiciatis, velit amet necessitatibus
-              laborum nostrum aperiam aliquid eos consectetur illo obcaecati
-              quam explicabo magnam architecto fuga recusandae rem.
-            </p>
-            <Link className={styles.heroLink} href={'/'}>
-              Click me ←
-            </Link>
-          </div>
-          <div className={`${styles.rightContent} ${styles.gridItem}`}>
-            <Image
-              src={
-                'https://images.unsplash.com/photo-1446889727648-8c23e3039b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=949&q=80'
-              }
-              alt="worm eye view of palm trees on a clear day"
-              fill
-            />
-            <Button title="sdfr" />
-            <Button title="learn more" />
-          </div>
-        </div>
+        <Navbar />
       </main>
     </>
   );

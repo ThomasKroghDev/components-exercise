@@ -1,0 +1,35 @@
+.navbar {
+  width: 100%;
+}
+
+.navList {
+  display: flex;
+  margin: 0 auto;
+  padding: 15px 30px;
+  width: 100%;
+  background-color: rgb(66, 66, 66);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.navItem {
+  margin: 0 30px;
+}
+.navItem:first-child {
+  margin: 0;
+  margin-right: auto;
+}
+.logo {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgb(255, 251, 251);
+  font-weight: 900;
+  letter-spacing: 5px;
+  font-family: 'Cardo', serif;
+}
+.navLink {
+  color: white;
+  text-decoration: none;
+  border-bottom: solid 2px rgb(255, 255, 255);
+  padding: 16px 16px 4px 16px;
+}
