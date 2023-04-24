@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import Hero from '@/components/hero/hero.component';
-import Navbar from '@/components/navbar/navbar.component';
+import Button from '@/components/button/button.componet';
+import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from 'react-icons/bs';
+import Footer from '@/components/footer/footer.component';
+
 export default function Home() {
   return (
     <>
@@ -12,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Navbar />
+        <Footer />
       </main>
     </>
   );
