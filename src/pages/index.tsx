@@ -1,6 +1,22 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import VideoContent from '@/components/videoContent/videoContent.component';
+import NewsTicker from '@/components/newsTicker/newsTicker.component';
+
+const messages = [
+  { id: 1, text: 'The quick brown fox jumps over the lazy dog' },
+  {
+    id: 2,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur dolor sit amet ultricies malesuada.',
+  },
+  {
+    id: 3,
+    text: 'Pellentesque eleifend mauris vel ex eleifend, nec pharetra mauris elementum. Fusce quis mauris vel nibh lacinia semper.',
+  },
+  {
+    id: 4,
+    text: 'Vestibulum eget ipsum vel dolor iaculis iaculis a vitae magna. Sed et massa quis velit pharetra blandit.',
+  },
+];
 
 export default function Home() {
   return (
@@ -12,7 +28,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <VideoContent />
+        <NewsTicker messages={messages} />
       </main>
     </>
   );
