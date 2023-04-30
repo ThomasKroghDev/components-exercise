@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import Button from '@/components/button/button.componet';
-import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from 'react-icons/bs';
-import Footer from '@/components/footer/footer.component';
+import VideoContent from '@/components/videoContent/videoContent.component';
 
 export default function Home() {
   return (
@@ -14,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Footer />
+        <VideoContent />
       </main>
     </>
   );

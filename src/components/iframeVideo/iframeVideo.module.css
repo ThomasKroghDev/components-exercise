@@ -1,0 +1,28 @@
+.videoContainerGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.videoContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (max-width: 800px) {
+  .videoContainer {
+    min-height: max-content;
+  }
+  .videoContent {
+    flex-direction: column;
+    min-height: 300px;
+  }
+}
