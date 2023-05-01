@@ -1,20 +1,37 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import NewsTicker from '@/components/newsTicker/newsTicker.component';
+import TestimonialSwiper from '@/components/testimonialSwiper/testimonialSwiper.component';
 
-const messages = [
-  { id: 1, text: 'The quick brown fox jumps over the lazy dog' },
+const testimonials = [
+  {
+    id: 1,
+    customerImg: 'https://source.unsplash.com/100x100/?portrait',
+    productName: 'Product A',
+    productImg: 'https://source.unsplash.com/300x200/?product',
+    testimonialText:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis libero nec orci venenatis, sed facilisis turpis suscipit.',
+    linkToProduct: 'https://example.com/product-a',
+    customerName: 'John Doe',
+  },
   {
     id: 2,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur dolor sit amet ultricies malesuada.',
+    customerImg: 'https://source.unsplash.com/100x100/?person',
+    productName: 'Product B',
+    productImg: 'https://source.unsplash.com/300x200/?product',
+    testimonialText:
+      'Pellentesque et lacus pretium, maximus lectus vel, dignissim libero. Sed lobortis libero nec orci venenatis, sed facilisis turpis suscipit.',
+    linkToProduct: 'https://example.com/product-b',
+    customerName: 'Jane Smith',
   },
   {
     id: 3,
-    text: 'Pellentesque eleifend mauris vel ex eleifend, nec pharetra mauris elementum. Fusce quis mauris vel nibh lacinia semper.',
-  },
-  {
-    id: 4,
-    text: 'Vestibulum eget ipsum vel dolor iaculis iaculis a vitae magna. Sed et massa quis velit pharetra blandit.',
+    customerImg: 'https://source.unsplash.com/100x100/?people',
+    productName: 'Product C',
+    productImg: 'https://source.unsplash.com/300x200/?product',
+    testimonialText:
+      'Fusce laoreet, ante eu sollicitudin facilisis, nisi augue interdum eros, non blandit orci sapien id mi. Sed lobortis libero nec orci venenatis, sed facilisis turpis suscipit.',
+    linkToProduct: 'https://example.com/product-c',
+    customerName: 'Bob Johnson',
   },
 ];
 
@@ -28,7 +45,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <NewsTicker messages={messages} />
+        <TestimonialSwiper testimonials={testimonials} />
       </main>
     </>
   );

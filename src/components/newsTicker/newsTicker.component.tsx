@@ -11,29 +11,30 @@ interface INewsTickerProps {
 }
 
 const NewsTicker: React.FC<INewsTickerProps> = ({ messages }) => {
-  const [tickerPosition, setTickerPosition] = useState(0);
-  const tickerRef = useRef(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  function tickerContainerWidth() {
-    return containerRef.current ? containerRef.current.offsetWidth : 0;
-  }
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const nextPos = tickerPosition - 1;
-      if (nextPos <= -tickerContainerWidth()) {
-        setTickerPosition(tickerContainerWidth());
-      } else {
-        setTickerPosition(nextPos);
-      }
-    }, 15);
-
-    return () => clearInterval(intervalId);
-  }, [tickerPosition]);
   if (!messages || messages.length === 0) {
     return null;
   }
+
+  const tickerRef = useRef<HTMLUListElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [tickerPosition, setTickerPosition] = useState(-1);
+
+  useEffect(() => {
+    const containerWidth = containerRef.current?.offsetWidth ?? 0;
+
+    const intervalId = setInterval(() => {
+      const messageWidth = tickerRef.current?.offsetWidth ?? 0;
+      const nextPos = tickerPosition - 1;
+      if (nextPos <= -messageWidth) {
+        setTickerPosition(containerWidth);
+      } else {
+        setTickerPosition(nextPos);
+      }
+    }, 30);
+
+    return () => clearInterval(intervalId);
+  }, [tickerPosition]);
+
   return (
     <div ref={containerRef} className={styles.container}>
       <div className={styles.tickerContainer}>

@@ -1,6 +1,7 @@
 .container {
   border: 1px solid #b0b0b0;
   display: flex;
+  background-color: #f1f1f1;
   flex-direction: column;
   max-width: 300px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
