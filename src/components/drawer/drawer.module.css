@@ -1,0 +1,28 @@
+.drawer {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #fff;
+  transition: left 0.3s ease-out;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  transform: translate(-300px);
+  position: absolute;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.623);
+}
+
+.drawer.open {
+  transform: translate(0);
+}
+
+.drawer button {
+  margin: 10px 10px 10px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.content {
+  padding: 16px;
+}

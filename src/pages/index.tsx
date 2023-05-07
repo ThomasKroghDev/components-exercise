@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import TestimonialSwiper from '@/components/testimonialSwiper/testimonialSwiper.component';
+import Modal from '@/components/modal/modal.component';
+import { useState } from 'react';
+import Drawer from '@/components/drawer/drawer.component';
 
 const testimonials = [
   {
@@ -36,6 +39,15 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const handleDrawerOpen = () => {
+    setIsDrawerOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setIsDrawerOpen(false);
+  };
   return (
     <>
       <Head>
@@ -45,7 +57,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <TestimonialSwiper testimonials={testimonials} />
+        <button onClick={handleDrawerOpen}>Open Drawer</button>
+        <Drawer isOpen={isDrawerOpen} onClose={handleDrawerClose}>
+          <h2>Drawer Content</h2>
+          <p>Some content goes here.</p>
+        </Drawer>
       </main>
     </>
   );
