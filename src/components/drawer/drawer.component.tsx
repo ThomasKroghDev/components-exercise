@@ -9,11 +9,15 @@ type DrawerProps = {
 
 const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, children }) => {
   return (
-    <div className={`${styles.drawer} ${isOpen ? styles.open : ''}`}>
-      <button className={styles.closeButton} onClick={onClose}>
-        <span className="visually-hidden">Close</span>
-      </button>
-      <div className={styles.content}>{children}</div>
+    <div className={styles.drawerContainer}>
+      <div className={`${styles.drawer} ${isOpen ? styles.open : ''}`}>
+        <div className={styles.content}>
+          <button className={styles.closeButton} onClick={onClose}>
+            <span className="visually-hidden">Close</span>
+          </button>
+          {children}
+        </div>
+      </div>
     </div>
   );
 };
